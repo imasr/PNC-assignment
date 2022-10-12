@@ -1,0 +1,47 @@
+<div class="d-flex justify-content-center align-items-center height-100vh">
+  <form
+    [formGroup]="registerForm"
+    class="p-3 border col-sm-6 col-md-6 col-lg-3"
+    (ngSubmit)="onSubmit()"
+  >
+    <h3 class="text-center">Register</h3>
+
+    <mat-form-field appearance="outline" class="mb-3 width-100">
+      <mat-label>Email</mat-label>
+      <input
+        matInput
+        type="email"
+        formControlName="email"
+        placeholder="Email"
+        formsError="Email"
+      />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="mb-3 width-100">
+      <mat-label>Password</mat-label>
+      <input
+        matInput
+        type="password"
+        formControlName="password"
+        formsError="Password"
+      />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="mb-3 width-100">
+      <mat-label>Bio</mat-label>
+      <textarea matInput formControlName="bio"></textarea>
+    </mat-form-field>
+
+    <div class="d-flex flex-row-reverse">
+      <button
+        mat-raised-button
+        type="submit"
+        color="primary"
+        [validationControl]="registerForm"
+      >
+        Submit
+      </button>
+    </div>
+  </form>
+</div>
+<app-spinner *ngIf="loading"></app-spinner>

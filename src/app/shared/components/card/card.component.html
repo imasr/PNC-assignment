@@ -1,0 +1,15 @@
+<mat-card class="p-2 m-2">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image">
+      <img [src]="avatar" [alt]="avatar" />
+    </div>
+    <mat-card-title>{{ name }}</mat-card-title>
+    <mat-card-subtitle>{{ email }}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image [src]="avatar" alt="Photo of a {{ avatar }}" />
+  <mat-card-content>
+    <p>
+      {{ bio }}
+    </p>
+  </mat-card-content>
+</mat-card>
