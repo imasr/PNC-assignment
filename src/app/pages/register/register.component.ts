@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ApiService } from 'src/app/shared/services/api.service';
 import { emailValidator } from 'src/app/shared/utility/form-validator';
@@ -12,16 +12,16 @@ import { emailValidator } from 'src/app/shared/utility/form-validator';
 export class RegisterComponent implements OnInit {
   loading = false;
 
-  registerForm = new FormGroup({
-    email: new FormControl('', {
+  registerForm = new UntypedFormGroup({
+    email: new UntypedFormControl('', {
       validators: [Validators.required, emailValidator],
       updateOn: 'blur',
     }),
-    password: new FormControl('', {
+    password: new UntypedFormControl('', {
       validators: [Validators.required, Validators.minLength(3)],
       updateOn: 'blur',
     }),
-    bio: new FormControl('', {
+    bio: new UntypedFormControl('', {
       updateOn: 'blur',
     }),
   });
