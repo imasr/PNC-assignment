@@ -5,9 +5,10 @@ import { ApiService } from 'src/app/shared/services/api.service';
 import { emailValidator } from 'src/app/shared/utility/form-validator';
 
 @Component({
-  selector: 'app-register',
-  templateUrl: './register.component.html',
-  styleUrls: ['./register.component.scss'],
+    selector: 'app-register',
+    templateUrl: './register.component.html',
+    styleUrls: ['./register.component.scss'],
+    standalone: false
 })
 export class RegisterComponent implements OnInit {
   loading = false;

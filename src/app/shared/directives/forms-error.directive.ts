@@ -20,7 +20,8 @@ const errorMessages: any = {
 };
 
 @Directive({
-  selector: '[formsError]',
+    selector: '[formsError]',
+    standalone: false
 })
 export class FormsErrorDirective {
   constructor(private elRef: ElementRef, private control: NgControl) {}
@@ -84,7 +85,8 @@ export class FormsErrorDirective {
 }
 
 @Directive({
-  selector: '[validationControl]',
+    selector: '[validationControl]',
+    standalone: false
 })
 export class FormSubmitValidationDirective {
   @Input() validationControl: any;

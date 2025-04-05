@@ -3,9 +3,10 @@ import { Router } from '@angular/router';
 import { ApiService } from 'src/app/shared/services/api.service';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss'],
+    selector: 'app-dashboard',
+    templateUrl: './dashboard.component.html',
+    styleUrls: ['./dashboard.component.scss'],
+    standalone: false
 })
 export class DashboardComponent implements OnInit {
   user: { name?: string; email?: string; bio?: string; img?: string } = {};
